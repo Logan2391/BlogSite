@@ -47,4 +47,9 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+// Add listing route
+router.get('/new', (req, res) => {
+    res.render('newPost');
+});
+
 module.exports = router;

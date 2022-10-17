@@ -37,9 +37,20 @@
         </div>
     </nav>
 
-    <div class="container d-flex justify-content-center">
-        <h5 class="fs-1">Your Dashboard</h5>
+    <div class="container w-50 mt-5">
+        <form id="signup-form">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Title</span>
+                <input type="text" class="form-control" id="post-title" aria-describedby="basic-addon1">
+              </div>
+            <div class="input-group">
+                <span class="input-group-text">Content</span>
+                <textarea class="form-control" id="post-content" aria-label="With textarea"></textarea>
+              </div><br>
+            <button type="submit" class="btn btn-primary">Create Post</button>
+        </form>
     </div>
+
 
     <!-- footer -->
     <footer class="text-center text-white mt-5" style="background-color: #f1f1f1;">

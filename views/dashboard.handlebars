@@ -1,0 +1,12 @@
+{{#if logged_in}}
+<div class="container">
+    <div class="container d-flex justify-content-center flex-column">
+        <h5 class="fs-2 text-center">Your Dashboard</h5>
+        <button type="button" id="newPostBtn" class="btn btn-secondary btn-lg w-25 m-auto">Create a new post +</button>
+    </div>
+</div>
+
+{{> userPosts}}
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}

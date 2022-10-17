@@ -5,7 +5,7 @@ const { User, Post } = require('../../models');
 //Create new user
 router.post('/', async (req, res) => {
   try {
-    const nameS = req.body.name;
+    const nameS = req.body.username;
     const passwordS = req.body.password;
     const emailS = req.body.email;
 
@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
 
   
     const userData = await User.create({
-      name: nameX,
+      username: nameX,
       password: passwordX,
       email: emailX,
     });
@@ -86,19 +86,6 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
-  }
-});
-
-//View a specific user
-router.get('/:id', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.params.id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Listing }],
-    });
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(500).json(err);
   }
 });
 

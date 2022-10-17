@@ -1,0 +1,34 @@
+{
+  "name": "blogsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logan2391/BlogSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Logan2391/BlogSite/issues"
+  },
+  "homepage": "https://github.com/Logan2391/BlogSite#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.3.5",
+    "uuid": "^8.3.2",
+    "xss": "^1.0.14"
+  }
+}

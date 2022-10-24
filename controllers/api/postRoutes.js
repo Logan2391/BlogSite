@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const xss = require("xss");
-const { Listing, User, Post } = require('../../models');
+const { User, Post } = require('../../models');
 
 module.exports = router;
 
@@ -36,16 +36,16 @@ router.post('/', async (req, res) => {
 // UPDATE a post
 router.put('/:id', async (req, res) => {
     try {
-        const listingData = await Listing.update(req.body, {
+        const postData = await Post.update(req.body, {
             where: {
                 id: req.params.id,
             },
         });
-        if (!listingData[0]) {
+        if (!postData[0]) {
             res.status(404).json({ message: "No listing with that ID found!" });
             return;
         }
-        res.status(200).json(listingData);
+        res.status(200).json(postData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -55,13 +55,13 @@ router.put('/:id', async (req, res) => {
 // DELETE a post
 router.delete('/:id', async (req, res) => {
     try {
-        const userData = await Listing.destroy({
+        const userData = await Post.destroy({
             where: {
                 id: req.params.id,
             },
         });
         if (!userData) {
-            res.status(404).json({ message: 'No listing with this id!' });
+            res.status(404).json({ message: 'No post with this id!' });
             return;
         }
         res.status(200).json(userData);

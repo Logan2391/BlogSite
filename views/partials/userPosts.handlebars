@@ -4,13 +4,18 @@
         <div class="card w-100">
             <div class="card-header">
                 {{title}}
-                <div class="float-end">Created by: {{user.username}} at {{created_at}} </div>
             </div>
             <div class="card-body">
                 <p class="card-text">{{content}}</p>
+                <div>
+                    <i data-id='{{id}}' class="deleteBtn text-dark fas fa-trash-can m-1"></i>
+                    <a href="../edit/{{id}}"><i data-id='{{id}}' class="editBtn text-dark fas fa-pen-to-square"></i></a>
+                </div>
             </div>
         </div>
     </div>
 
     {{/each}}
 </div>
+
+<script src="/js/dashBtns.js"></script>

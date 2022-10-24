@@ -1,0 +1,15 @@
+<div class="container w-50 mt-5">
+    <form data-id='{{id}}' id="editPostForm">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Title</span>
+            <input type="text" class="form-control" id="post-title" value="{{title}}" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Content</span>
+            <textarea class="form-control" id="post-content" aria-label="With textarea">{{content}}</textarea>
+        </div><br>
+        <button type="submit" class="btn btn-secondary">Update Post</button>
+    </form>
+</div>
+
+<script src="/js/updatePost.js"></script>
